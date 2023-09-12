@@ -1,7 +1,9 @@
 import React from "react";
+import {BrowserRouter, Route, Routes} from "react-router-dom";
 import styled from "styled-components";
 import logo from './logo.svg';
 import './App.css';
+import HomeView from "./views/HomeView";
 
 const Container = styled.div`
   text-align: right;
@@ -9,11 +11,11 @@ const Container = styled.div`
 
 function App() {
   return (
-    <Container>
-      <div className="App">
-        OhMina
-      </div>
-    </Container>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<HomeView />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
